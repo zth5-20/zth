@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>微信</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+	<link rel="stylesheet" href="css/iconfont/iconfont.css" />
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	
+	
+	<script src="css/iconfont/iconfont.js"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/fontSize.js"></script>
+	<script src="js/rippleEffect.js"></script>
+	<script src="js/wcPop/wcPop.js"></script>
+	
+</head>
+<body>
+	
+	<!-- <>主容器 -->
+	<div class="weChatIM__panel clearfix">
+		<div class="we__chatIM-wrapper flexbox flex__direction-column">
+			<!-- //顶部 -->
+			<div class="wcim__topBar topfixed"><div class="inner flexbox flex-alignc">
+				<h4 class="barTxt flex1"><div class="barCell flexbox flex__direction-column"><em class="clamp1 c2020">微信(5)</em></div>
+					</h4><a class="linkico effect__ripple-fff" href="javascript:;" ><i class="iconfont icon-sousuo c2020"></i></a>
+				<a class="linkico effect__ripple-fff " href="javascript:;" id="J__topbarAdd"><i class="iconfont icon-jia3 c2020"></i></a>
+				</div>
+			</div>
+			<!-- //主页面 -->
+			<div class="wcim__container flex1">
+				<div id="mescroll" class="mescroll"><div class="tabBar__tmpl tabBar01"><div class="wcim__searbox"><div class="inner flexbox flex-alignc"><i class="iconfont icon-search"></i><input class="ipt-sear flex1" type="text"
+								name="kw" placeholder="搜索聊天记录" /></div>
+						</div>
+						<!-- >>1、消息模块 -->
+						<div class="wcim__recordList" id="J__recordList">
+							<ul class="clearfix">
+								<li class="wcim__material-cell"><a class="flexbox flex-alignc" href="微信-群聊.html"><div class="avator"><img src="img/uimg/u__qun-img01.jpg" /></div><div class="info flex1"><h2 class="title">幸运双色球</h2><p class="desc clamp1">需要注册或兑换积分请联系QQ注册大使 17216510</p>
+										</div><label class="time flex-selft">22:35</label>
+									</a>
+								</li>
+								<li class="wcim__material-cell">
+									<a class="flexbox flex-alignc" href="微信-群聊.html">
+										<div class="avator groups num5">
+											<img src="img/uimg/u__chat-img11.jpg" /><img src="img/uimg/u__chat-img03.jpg" /><img src="img/uimg/u__chat-img05.jpg" />
+											<img src="img/uimg/u__chat-img07.jpg" /><img src="img/uimg/u__chat-img09.jpg" />
+										</div>
+										<div class="info flex1"><h2 class="title clamp1">兄弟姐妹同乡交流群</h2><p class="desc clamp1">表弟记得你上次说要带大伙一起去吃庄闲酒家，怎么是忘了嚒！</p>
+										</div><label class="time flex-selft">昨天</label><em class="wcim__badge">5</em>
+									</a>
+								</li>
+								<li class="wcim__material-cell"><a class="flexbox flex-alignc" href="微信-单聊.html"><div class="avator"><img src="img/uimg/u__chat-img06.jpg" /></div><div class="info flex1"><h2 class="title">(>^ω^<)喵</h2> <p class="desc clamp1">好久都没有联系了，最近还好吧。</p>
+										</div><label class="time flex-selft">8月16日</label>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="cls rmb-50"></div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部tabBar -->
+			<div class="wcim__tabBar">
+				<div class="bottomfixed wcim__borT">
+					<ul class="flexbox flex-alignc" id="J__tabBar">
+						<li class="flex1 effect__ripple on"><a href="index.html"><span class="ico"><i class="iconfont icon-qipao"></i><em class="wcim__badge">5</em></span><span class="txt">微信</span></a></li><li class="flex1 effect__ripple"><a href="index-通讯录.html"><span class="ico"><i class="iconfont icon-icon161606" style="font-size: .58rem"></i></span><span class="txt">通讯录</span></a></li><li class="flex1 effect__ripple"><a href="index-发现.html"><span class="ico"><i class="iconfont icon-faxian2"></i><em class="wcim__badge wcim__badge-dot"></em></span><span
+						 class="txt">发现</span></a></li><li class="flex1 effect__ripple"><a href="index-我.html"><span class="ico"><i class="iconfont icon-iconfontwohover" style="    font-size: .5rem; font-weight: bold;"></i></span><span class="txt">我</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- …… 添加朋友弹窗模板.Start -->
+	<div class="wcim__popup-tmpl">
+		<div id="J__popupTmpl-addFriends" style="display:none;"><div class="wcim__popupTmpl"><div class="wcim__addFriends-panel"><ul class="wcim__similarPanel-cells clearfix bg-fff rmt-25"><li><a class="flexbox flex-alignc" href="#"><span class="bg"><i class="iconfont icon-sousuo c-9ea0a3 fs-32"></i></span><label class="flex1 flexbox"><input class="ipt-text flex1" type="text" placeholder="微信号/QQ号/手机号" /></label></a></li>
+					</ul><ul class="wcim__similarPanel-cells clearfix rmt-15"><li><a class="flexbox flex-alignc" href="#"><label class="flex1 flexbox flex-alignc flex-justifyc ff-ar" style="padding: .2rem 0 .5rem 0"><i class="c-9ea0a3" >我的微信号：livesng </i>&nbsp;<i class="iconfont icon-erweima1"></i></label></a></li>
+					</ul>
+			
+			<!-- 我的导航 -->
+					<div class="wcim__uNavMenu">
+						<ul class="clearfix bg-fff rmt-25">
+							<li><a class="wcim__material-cell flexbox flex-alignc" href="#">
+								<span class="icobg wcim__bg0a"><i class="iconfont icon-leida" style="font-size: .42rem;"></i></span>
+								
+								<label class="flex1 flexbox"><em class="flex1">雷达加朋友<br>
+								<i style="font-size: .2rem;color: #aaa;">添加身边的朋友</i></em><i class="iconfont icon-arrR c-b9bbbc fs-24"></i>
+								
+								</label><i class="iconfont icon-you"></i></a>
+							
+							</li>
+							<li><a class="wcim__material-cell flexbox flex-alignc" href="#">
+								<span class="icobg wcim__bg0b"><i class="iconfont icon-qunliao" style="font-size: .42rem;"></i></span>
+								
+								<label class="flex1 flexbox"><em class="flex1">面对面建群<br>
+								<i style="font-size: .2rem;color: #aaa;">与身边的朋友进入同一个群聊</i></em><i class="iconfont icon-arrR c-b9bbbc fs-24"></i>
+								
+								</label><i class="iconfont icon-you"></i></a>
+							
+							</li>
+							<li><a class="wcim__material-cell flexbox flex-alignc" href="#">
+								<span class="icobg wcim__bg0c"><i class="iconfont icon-saoyisao1" style="font-size: .42rem;"></i></span>
+								
+								<label class="flex1 flexbox"><em class="flex1">扫一扫<br>
+								<i style="font-size: .2rem;color: #aaa;">扫码二维码名片</i></em><i class="iconfont icon-arrR c-b9bbbc fs-24"></i>
+								
+								</label><i class="iconfont icon-you"></i></a>
+							
+							</li>
+							<li><a class="wcim__material-cell flexbox flex-alignc" href="#">
+								<span class="icobg wcim__bg0d"><i class="iconfont icon-xindepengyou" style="font-size: .42rem;"></i></span>
+								
+								<label class="flex1 flexbox"><em class="flex1">手机联系人<br>
+								<i style="font-size: .2rem;color: #aaa;">添加或邀请通讯录中的朋友</i></em><i class="iconfont icon-arrR c-b9bbbc fs-24"></i>
+								
+								</label><i class="iconfont icon-you"></i></a>
+							
+							</li>
+							<li><a class="wcim__material-cell flexbox flex-alignc" href="#">
+								<span class="icobg wcim__bg0e"><i class="iconfont icon-gongzhonghao" style="font-size: .42rem;"></i></span>
+								
+								<label class="flex1 flexbox"><em class="flex1">公众号<br>
+								<i style="font-size: .2rem;color: #aaa;">获取更多资讯和服务</i></em><i class="iconfont icon-arrR c-b9bbbc fs-24"></i>
+								
+								</label><i class="iconfont icon-you"></i></a>
+							
+							</li>
+							<li><a class="wcim__material-cell flexbox flex-alignc" href="#">
+								<span class="icobg wcim__bg0e"><i class="iconfont icon-qiyeweixin" style="font-size: .42rem;"></i></span>
+								
+								<label class="flex1 flexbox"><em class="flex1">企业微信联系人<br>
+								<i style="font-size: .2rem;color: #aaa;">通过手机号搜索企业微信用户</i></em><i class="iconfont icon-arrR c-b9bbbc fs-24"></i>
+								
+								</label><i class="iconfont icon-you"></i></a>
+							
+							</li>
+						</ul>
+			</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- …… 添加朋友弹窗模板.End -->
+
+	<!-- …… 发起群聊弹窗模板.Start -->
+	<div class="wcim__popup-tmpl">
+		<div id="J__popupTmpl-launchGroupChat" style="display:none;">
+			<div class="wcim__popupTmpl">
+				<div class="wcim__launchGroupChat-panel" id="J__groupChatList">
+					<ul class="wcim__similarPanel-cells clearfix bg-fff rmt-25"><li><a class="flexbox flex-alignc" href="#"><span class="bg"><i class="iconfont icon-sousuo c-9ea0a3 fs-32"></i></span><label class="flex1 flexbox"><input class="ipt-text flex1" type="text" placeholder="查找群" /></label></a></li>
+					</ul>
+					<div class="group-table qun rmt-25"><h2 class="hdtit flexbox"><em class="flex1">我的群聊</em> <i class="iconfont icon-arrT c-9ea0a3 fs-32"></i></h2>
+						<ul class="wcim__similarPanel-cells clearfix"><li class="item wcim__material-cell"><img class="uimg" src="img/uimg/u__qun-img02.jpg" /><span class="name flex1">FIFA世界杯交流群</span></li><li class="item wcim__material-cell"><img class="uimg" src="img/uimg/u__qun-img03.jpg" /><span class="name flex1">湖北老乡汇</span></li>
+							<li class="item wcim__material-cell"><img class="uimg" src="img/uimg/u__qun-img01.jpg" /><span class="name flex1">幸运双色球</span></li>
+						</ul>
+					</div>
+					<div class="group-table rmt-15">
+						<h2 class="hdtit flexbox"><em class="flex1">我的好友</em> <i class="iconfont icon-arrT c-9ea0a3 fs-32"></i></h2>
+						<ul class="wcim__similarPanel-cells clearfix"><li class="item wcim__material-cell"><img class="uimg" src="img/uimg/u__chat-img01.jpg" /><span class="name flex1">马云</span> <i class="chkbox"></i></li><li class="item wcim__material-cell"><img class="uimg" src="img/uimg/u__chat-img02.jpg" /><span class="name flex1">萨能salon</span> <i class="chkbox"></i></li>
+							<li class="item wcim__material-cell"><img class="uimg" src="img/uimg/u__chat-img03.jpg" /><span class="name flex1">科比-布莱特</span> <i class="chkbox"></i></li><li class="item wcim__material-cell"><img class="uimg" src="img/uimg/u__chat-img04.jpg" /><span class="name flex1">张总</span> <i class="chkbox"></i></li><li class="item wcim__material-cell"><img class="uimg" src="img/uimg/u__chat-img05.jpg" /><span class="name flex1">旋风小子</span> <i class="chkbox"></i></li>
+							<li class="item wcim__material-cell"><img class="uimg" src="img/uimg/u__chat-img06.jpg" /><span class="name flex1">(>^ω^<)喵</span> <i class="chkbox"></i></li>
+							<li class="item wcim__material-cell"><img class="uimg" src="img/uimg/u__chat-img07.jpg" /><span class="name flex1">风铃子</span> <i class="chkbox"></i></li><li class="item wcim__material-cell"><img class="uimg" src="img/uimg/u__chat-img08.jpg" /><span class="name flex1">幂幂</span> <i class="chkbox"></i></li>
+						</ul>
+					</div>
+					<div class="group-btn"><div class="fixbottom"><a class="wcim__btn-primary btn-sure disabled" href="javascript:;">确定<em class="groupChatNum"></em></a></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- …… 发起群聊弹窗模板.End -->
+
+	<!-- //加载更多提示 -->
+	<link rel="stylesheet" href="js/mescroll/mescroll.css" />
+	<script src="js/mescroll/mescroll.js"></script>
+	<script src="js/mescroll/mescroll-wrapper.js"></script>
+
+	<script type="text/javascript">
+		/** __公共函数 */
+		$(function () {
+			wcRipple({ elem: '.effect__ripple-fff', opacity: .15, speed: .5, bgColor: "#fff" });
+			wcRipple({ elem: '.effect__ripple', opacity: .15, speed: .5, bgColor: "#000" });
+			
+			// 禁止长按弹出系统菜单
+			$("body").on("contextmenu", ".weChatIM__panel", function (e) {
+				e.preventDefault();
+			});
+
+			// 顶部 “+” 菜单
+			$("#J__topbarAdd").on("click", function(e){
+				var _points = [e.clientX, e.clientY];
+				var contextMenuIdx = wcPop({skin: 'contextmenu', shade: true,shadeClose: true,opacity: 0,style: 'background:#4B4B4B; min-width:3.1rem;    right: .2rem;border-radius: 5px;top: 1.1rem;',
+					btns: [{text: '<div class="to_top"></div><i class="iconfont icon-qipao fs-40 mr-10"></i><span>发起群聊</span>',style: 'color:#fff;border-bottom: 1px #5A5A5A solid;', onTap(){wcPop.close(contextMenuIdx);
+							var addfriendIdx = wcPop({id: 'wcim_fullscreen',skin: 'fullscreen',title: '发起群聊',content: $("#J__popupTmpl-launchGroupChat").html(),position: 'right',opacity: .1,xclose: true,style: 'background: #f2f1f6;'
+							});
+						}},{text: '<i class="iconfont icon-icon fs-40 mr-10"></i><span>添加朋友</span>',style: 'color:#fff;border-bottom: 1px #5A5A5A solid;', onTap(){wcPop.close(contextMenuIdx);
+							var addfriendIdx = wcPop({id: 'wcim_fullscreen',skin: 'fullscreen',title: '添加朋友',
+								content: $("#J__popupTmpl-addFriends").html(),position: 'right',opacity: .1,xclose: true,style: 'background: #f2f1f6;'
+							});
+						}},
+						{text: '<i class="iconfont icon-saoyisao1 fs-40 mr-10"></i><span>扫一扫</span>',style: 'color:#fff;border-bottom: 1px #5A5A5A solid;',},
+						{text: '<i class="iconfont icon-shoufukuan fs-40 mr-10"></i><span>收付款</span>',style: 'color:#fff;border-bottom: 1px #5A5A5A solid;',},
+						{text: '<i class="iconfont icon-xinxi fs-40 mr-10"></i><span>帮助与反馈</span>',style: 'color:#fff;border-bottom: 1px #5A5A5A solid;',}
+					]
+				});
+			});
+			// 群聊选项
+			$("body").on("click", "#J__launchGroupChat .group-table .hdtit", function () {
+				$(this).toggleClass("cur");$(this).siblings("ul").slideToggle(300);
+			});
+			$("body").on("click", "#J__launchGroupChat .group-table:not(.qun) .item", function () {
+				$(this).toggleClass("selected");
+				var len = $("#J__launchGroupChat .group-table:not(.qun) .item.selected").size();
+				if (len > 0) {
+					$(".btn-sure").removeClass("disabled");$(".groupChatNum").text('(' + len + ')');
+				} else {
+					$(".btn-sure").addClass("disabled");$(".groupChatNum").text('');
+				}
+			});
+		});
+		
+		/** __自定函数 */
+		$(function(){
+			// >>> 【1、消息模块】------------------------------------------
+			// 聊天记录页面（长按操作）
+			$("#J__recordList").on("contextmenu", "li", function(e){
+				e.preventDefault();var _points = [e.pageX, e.pageY];
+				wcPop({
+					skin: 'contextmenu',follow: _points,opacity: 0,btns: [{text: '标为未读'}, { text: '置顶' }, {text: '删除该聊天'}
+					]
+				});
+			});
+
+			// 跳转链接
+			$(".weChatIM__panel").on("click", "*[routeUrl]", function(e){
+				var routeurl = $(this).attr('routeUrl');
+				if(!routeurl) return;
+				window.location.href = routeurl;
+			});
+		});
+	</script>
+	
+</body>
+</html>
